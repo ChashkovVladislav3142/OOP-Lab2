@@ -17,6 +17,7 @@ public interface IItem
     IItemState State { get; }
     void SetState(IItemState state);
     void PerformAction();
+    void Repair();
 }
 
 public interface IEquippable : IItem

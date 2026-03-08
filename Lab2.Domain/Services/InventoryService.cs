@@ -2,7 +2,7 @@ using Lab2.Domain.Interfaces;
 
 namespace Lab2.Domain.Services;
 
-public class InventoryManager
+public class InventoryService
 {
     private readonly List<IItem> _items = new();
 
@@ -16,7 +16,7 @@ public class InventoryManager
         _items.Remove(item);
     }
 
-    public IEnumerable<IItem> GetItems() => _items.AsReadOnly();
+    public IReadOnlyCollection<IItem> GetItems() => _items.AsReadOnly();
 
     public void ShowInventory()
     {
